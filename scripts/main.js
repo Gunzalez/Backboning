@@ -7,6 +7,7 @@ var IssueModel = Backbone.Model.extend({
 	url: 'https://api.github.com/repos/gruntjs/grunt/issues/'
 });
 
+
 var IssuesCollection = Backbone.Collection.extend({
 	url: 'https://api.github.com/repos/gruntjs/grunt/issues'
 });

@@ -7,6 +7,7 @@ body {
 	font-size: small;
 }
 
+
 .cleft { clear: left; }
 .hidden * { display: none; }
 
@@ -47,7 +48,18 @@ ul li {
 	border: 1px solid #fff;
 	position: relative;
 	border-bottom: 1px solid #ededed;
-	border-right: 1px solid #ededed;
+	border-right: 1px solid #ededed;	
+	-webkit-transition: background-color 0.9s;
+	-moz-transition: background-color 0.9s;
+	-o-transition: background-color 0.9s;
+}
+
+
+ul li:hover {
+	background-color: #f0f0f0;	
+	-webkit-transition: background-color 0.4s;
+	-moz-transition: background-color 0.4s;
+	-o-transition: background-color 0.4s;
 }
 
 
@@ -67,17 +79,13 @@ ul li .btn:hover {
 	background-color: #069;
 }
 
-ul li:hover {
-	background-color: #f7f7f7;
-}
-
 .button {
 	display:inline-block;
 	background-color: #09C;
 	color: #fff;
 	padding: 10px 14px;
 	text-decoration: none;
-	border: 5px solid #fff;
+	border: 5px solid #f2f2f2;
 	-webkit-transition: border 0.4s;
 	-moz-transition: border 0.4s;
 	-o-transition: border 0.4s;	
@@ -131,11 +139,15 @@ ul li:hover {
 }
 
 .button.delete {	
-	background-color: #F30;
+	background-color: #f00;
 }
 
 .button.delete:hover {	
 	background-color: #900;
 	border: 5px solid #900;
 }	 
+
+.hidden * {
+	display: none;
+}
 
