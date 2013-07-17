@@ -1,0 +1,141 @@
+
+
+body {
+	margin: 0 0 100px 0;
+	padding: 0;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: small;
+}
+
+.cleft { clear: left; }
+.hidden * { display: none; }
+
+#container {
+	width: 800px;
+	margin: 40px auto;
+	position: relative;
+}
+
+h2 {
+	margin: 0;
+	padding: 10px 0 10px 0;
+	text-align: center;
+}
+
+p.welcome {
+	text-align: center;
+}
+
+ul {
+	margin: 0 auto;	
+	padding: 0;
+	list-style: none;
+	width: 800px;
+	float: left;
+	border-top: 1px solid #ededed;
+	border-left: 1px solid #ededed;
+}
+
+ul li {
+	float: left;
+	width: 200px;
+	height: 160px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	border: 1px solid #fff;
+	position: relative;
+	border-bottom: 1px solid #ededed;
+	border-right: 1px solid #ededed;
+}
+
+
+ul li .btn {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	text-align: center;
+	display: block;
+	background-color: #09C;
+	color: #fff;
+	padding: 8px 10px;
+	text-decoration: none;
+}
+
+ul li .btn:hover {
+	background-color: #069;
+}
+
+ul li:hover {
+	background-color: #f7f7f7;
+}
+
+.button {
+	display:inline-block;
+	background-color: #09C;
+	color: #fff;
+	padding: 10px 14px;
+	text-decoration: none;
+	border: 5px solid #fff;
+	-webkit-transition: border 0.4s;
+	-moz-transition: border 0.4s;
+	-o-transition: border 0.4s;	
+}
+
+.button:hover {
+	background-color: #069;
+	border: 5px solid #069;
+	-webkit-transition: border 0.4s;
+	-moz-transition: border 0.4s;
+	-o-transition: border 0.4s;		
+}
+
+.meta {
+	width: 100%;
+	float: left;
+	padding: 10px 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.meta * {
+	padding:0;
+	margin:0
+}
+.meta dl {
+	width:300px;
+	overflow:hidden;
+}
+.meta dt {
+	 float:left;
+	 width:80px;
+	 font-weight: bold;
+}
+.meta dd {
+	float:left;
+	width:220px;
+}
+
+.issue-body {
+	clear: left;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+.button.close {
+	position: absolute;
+	top: 60px;
+	right: 20px;
+}
+
+.button.delete {	
+	background-color: #F30;
+}
+
+.button.delete:hover {	
+	background-color: #900;
+	border: 5px solid #900;
+}	 
+
