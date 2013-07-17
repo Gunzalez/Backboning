@@ -43,7 +43,6 @@ var IssueDetailsView = Backbone.View.extend({
 		var issue = new IssueModel({'id':options.id});
 		issue.fetch({
 			success: function(data){
-				console.log(data.attributes)
 				that.$el.html(that.template({
 					title: data.attributes.title,
 					id: data.attributes.id,
@@ -53,24 +52,6 @@ var IssueDetailsView = Backbone.View.extend({
 				}));
 			}	
 		});
-		
-
-		//var issue = new IssueModel({'number':options.number});
-		
-		/*issue.fetch({
-			success: function(issue){
-
-				this.$el.html(this.template({issue: issue.models}));	
-				
-				//that.$el.html(that.template({issues: issues.models}));	
-			}	
-		})*/
-		
-		
-		//var issue = new IssueModel({'id': options.id});
-		//console.log(issuesListView)
-		//this.$el.html(options.id);
-		//this.$el.html(this.template({issue: id}));
 	}	
 });
 var issueDetailsView = new IssueDetailsView();
