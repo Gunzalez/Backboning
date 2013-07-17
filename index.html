@@ -31,7 +31,7 @@
 				<% _.each(issues, function(issue, index){ %>
 					<%= _.template($('#issues-list-item').html().trim(), {
 						'title': issue.get('title'), 
-						'id': issue.get('id')
+						'number': issue.get('number')
 					})					
 					%>					
 				<%})%>
@@ -41,10 +41,7 @@
         <script type="text/template" id="issues-list-item">
             <li class="list-item">
                  <%= title %>
-                 <a href="#details/<%= id %>" class="btn">Details</a>
-				 <div class="hidden">
-				 	
-				 </div>
+                 <a href="#details/<%= number %>" class="btn">Details</a>
             </li>
         </script>
         

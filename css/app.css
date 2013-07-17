@@ -93,4 +93,8 @@ ul li:hover {
 	-o-transition: border 0.4s;		
 }
 
+.hidden * {
+	display: none;
+}
+
 

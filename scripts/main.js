@@ -1,6 +1,10 @@
 
 var IssueModel = Backbone.Model.extend({
-	//title: options.	
+	el: '#container',
+	initialize: function () {
+		this.url = this.url + this.id
+	},	
+	url: 'https://api.github.com/repos/gruntjs/grunt/issues/'
 });
 
 
@@ -35,14 +39,32 @@ var IssueDetailsView = Backbone.View.extend({
 		this.template = _.template($('#issues-item-detail').html().trim());
 	},	
 	render: function(options){
-		var issues = new IssuesCollection();
-		issues.fetch({
-			success: function(issues){	
-				var issue = _.findWhere(issues.toJSON(), {id: options.id});
-				console.log(issues.toJSON(), options.id)
+		var that = this;
+		var issue = new IssueModel({'id':options.id});
+		issue.fetch({
+			success: function(data){
+				console.log(data.attributes)
+				that.$el.html(that.template({
+					title: data.attributes.title,
+					id: data.attributes.id,
+					date: data.attributes.created_at,
+					state: data.attributes.state,
+					detail: data.attributes.body
+				}));
+			}	
+		});
+		
+
+		//var issue = new IssueModel({'number':options.number});
+		
+		/*issue.fetch({
+			success: function(issue){
+
+				this.$el.html(this.template({issue: issue.models}));	
+				
 				//that.$el.html(that.template({issues: issues.models}));	
 			}	
-		})
+		})*/
 		
 		
 		//var issue = new IssueModel({'id': options.id});
